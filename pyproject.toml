@@ -1,0 +1,20 @@
+[build-system]
+requires = ["maturin>=1.7,<2"]
+build-backend = "maturin"
+
+[project]
+name = "wutong"
+description = "Wutong Protocol (WTP wutong/0.1) SDK for Python, backed by the Rust core"
+version = "0.1.0"
+requires-python = ">=3.9"
+license = "AGPL-3.0-only"
+readme = "README.md"
+classifiers = ["Programming Language :: Rust", "Programming Language :: Python :: 3", "Development Status :: 2 - Pre-Alpha"]
+
+[project.urls]
+Repository = "https://github.com/project-wutong/wutong-sdk-python"
+
+[tool.maturin]
+python-source = "python"
+module-name = "wutong._native"
+features = ["pyo3/extension-module"]
